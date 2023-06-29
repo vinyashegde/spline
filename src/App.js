@@ -5,6 +5,9 @@ import AboutCode from "./components/aboutcode";
 import GithubCard from "./components/githubcard";
 import AnimatedCursor from "react-animated-cursor";
 import FootCode from "./components/foot";
+import Footer from "./components/footnew";
+import DefaultTimeline from "./components/timeline";
+import PopupCard from "./components/PopupCard";
 
 function ResizeHandler({ setIsMobile }) {
   useEffect(() => {
@@ -32,7 +35,10 @@ function App() {
         <AnimatedCursor />
       </div>
 
-      <div className="flex flex-col items-center justify-start min-h-screen bg-primary pb-20">
+      <div
+        id="homee"
+        className="flex flex-col items-center justify-start min-h-screen bg-primary pb-20"
+      >
         <div className="w-11/12 mt-4">
           <NavbarWithCTAButton></NavbarWithCTAButton>
         </div>
@@ -50,44 +56,88 @@ function App() {
           <Spline scene="https://draft.spline.design/qsvYhuKccbhtisLS/scene.splinecode" />
         </div>
 
-        <div className="min-w-screen min-h-screen flex items-center justify-center m-4">
-          <AboutCode />
+        <div id="aboutt">
+          <div className="min-w-screen min-h-screen flex items-center justify-center m-4">
+            <AboutCode />
+          </div>
         </div>
+
+        <h1 class="text-3xl text-white font-semibold pb-5" id="timelinee">
+          Experience
+        </h1>
+        <div className="m-20">
+          <DefaultTimeline />
+        </div>
+
+        <h1 class="text-3xl text-white font-semibold pb-5 pt-20" id="projectss">
+          Projects
+        </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 m-7">
           <div className={isMobile ? "w-full" : ""}>
             <GithubCard
-              title="Project Title"
-              description="This is a description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque scelerisque sagittis."
+              title="Shorto: URL Shortener"
+              imageUrl="https://lh3.googleusercontent.com/1PPLFL4RkCAIYIOLH33y5sXCaDFb2maG0mwhazeDNCYZ3N18ZVWZU7o6Gg5D6-V1sEE7jsdCuibfXOn7h7wqfCuoPw=w640-h400-e365-rj-sc0x00ffffff"
               htmlText="HTML"
               cssText="CSS"
               jsText="JS"
+              githubLink="https://github.com/vinyashegde/shorto_url_shorter"
             />
           </div>
           <div className={isMobile ? "w-full" : ""}>
-            <GithubCard />
+            <GithubCard
+              title="Interlace CSS Library"
+              imageUrl="https://raw.githubusercontent.com/vinyashegde/dump/main/Untitled%20design.png"
+              htmlText=""
+              cssText="CSS"
+              jsText=""
+              githubLink="https://github.com/vinyashegde/interlace.css"
+            />
           </div>
           <div className={isMobile ? "w-full" : ""}>
-            <GithubCard />
+            <GithubCard
+              title="Project Floramis"
+              imageUrl="https://raw.githubusercontent.com/vinyashegde/dump/main/Untitled%20design%20(1).png"
+              htmlText="C#"
+              cssText="Unity"
+              jsText="REST API"
+              githubLink="https://github.com/vinyashegde/Project-Floramis/blob/main/INTRODUCTION.md"
+            />
           </div>
           <div>
             <div className={isMobile ? "w-full" : ""}>
-              <GithubCard />
+              <GithubCard
+                title="Project Floramis"
+                imageUrl="https://raw.githubusercontent.com/vinyashegde/dump/main/Untitled%20design%20(2).png"
+                htmlText="HTML"
+                cssText="CSS"
+                jsText="Firebase"
+                githubLink="https://github.com/vinyashegde/Project-Floramis/blob/main/INTRODUCTION.md"
+              />
             </div>
           </div>
           <div>
             <div className={isMobile ? "w-full" : ""}>
-              <GithubCard />
+              <GithubCard
+                title="Roll the Rooms"
+                imageUrl="https://img.itch.zone/aW1hZ2UvMTYyMzcyOS85NTE2NzY3LnBuZw==/original/ySbybu.png"
+                htmlText="Unity"
+                cssText="C#"
+                jsText=""
+                githubLink="https://github.com/vinyashegde/Project-Floramis/blob/main/INTRODUCTION.md"
+              />
             </div>
           </div>
-          <div>
+          {/* <div>
             <div className={isMobile ? "w-full" : ""}>
               <GithubCard />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
-      {/* <FootCode /> */}
+      <div id="contactuss">
+        <Footer />
+      </div>
     </div>
   );
 }
