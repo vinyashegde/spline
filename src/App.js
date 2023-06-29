@@ -8,11 +8,14 @@ import FootCode from "./components/foot";
 import Footer from "./components/footnew";
 import DefaultTimeline from "./components/timeline";
 import PopupCard from "./components/PopupCard";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function ResizeHandler({ setIsMobile }) {
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as per your requirements
+      setIsMobile(window.innerWidth <= 768);
+      // Adjust the breakpoint as per your requirements
     };
 
     window.addEventListener("resize", handleResize);
@@ -28,6 +31,10 @@ function ResizeHandler({ setIsMobile }) {
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   return (
     <div>
@@ -57,23 +64,37 @@ function App() {
         </div>
 
         <div id="aboutt">
-          <div className="min-w-screen min-h-screen flex items-center justify-center m-4">
+          <div
+            className="min-w-screen min-h-screen flex items-center justify-center m-4"
+            data-aos="flip-up"
+          >
             <AboutCode />
           </div>
         </div>
 
-        <h1 class="text-3xl text-white font-semibold pb-5" id="timelinee">
+        <h1
+          class="text-3xl text-white font-semibold pb-5"
+          id="timelinee"
+          data-aos="fade-down"
+        >
           Experience
         </h1>
-        <div className="m-20">
+        <div className="m-20" data-aos="fade-down">
           <DefaultTimeline />
         </div>
 
-        <h1 class="text-3xl text-white font-semibold pb-5 pt-20" id="projectss">
+        <h1
+          class="text-3xl text-white font-semibold pb-5 pt-20"
+          id="projectss"
+          data-aos="fade-down"
+        >
           Projects
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 m-7">
+        <div
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 m-7"
+          data-aos="flip-up"
+        >
           <div className={isMobile ? "w-full" : ""}>
             <GithubCard
               title="Shorto: URL Shortener"
