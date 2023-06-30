@@ -14,17 +14,11 @@ export default function DefaultTimeline() {
           </Timeline.Title>
           <Timeline.Body>
             <p>
-              As a freelance game developer, I have created captivating mobile
-              games using the Unity engine, delivering immersive experiences and
+              As a freelance game developer, I created captivating mobile games
+              using the Unity engine, delivering immersive experiences and
               engaging gameplay to users.
             </p>
           </Timeline.Body>
-          {/* <Button color="gray">
-            <p>
-              Learn More
-            </p>
-            <HiArrowNarrowRight className="ml-2 h-3 w-3" />
-          </Button> */}
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
@@ -48,14 +42,31 @@ export default function DefaultTimeline() {
       <Timeline.Item>
         <Timeline.Point />
         <Timeline.Content>
+          <Timeline.Time>March 2023</Timeline.Time>
+          <Timeline.Title className="text-white">
+            The Food Bridge (Google Solution Challenge)
+          </Timeline.Title>
+          <Timeline.Body>
+            <p>
+              A Firebase-based website combating food waste through surplus food
+              donation and youth volunteer engagement. It promotes
+              sustainability in catering services, hotels, and marriages.
+            </p>
+          </Timeline.Body>
+        </Timeline.Content>
+      </Timeline.Item>
+      <Timeline.Item>
+        <Timeline.Point />
+        <Timeline.Content>
           <Timeline.Time>May 2023</Timeline.Time>
           <Timeline.Title className="text-white">
             InsureTech Financial Services (Currently)
           </Timeline.Title>
           <Timeline.Body>
             <p>
-              I specialize in website development, focusing on frontend design
-              and implementing backend functionality.
+              Currently interning at InsureTech Financial Services, actively
+              involved in developing full-stack websites and contributing to the
+              company's web development projects.
             </p>
           </Timeline.Body>
         </Timeline.Content>

@@ -14,18 +14,6 @@ code {
     monospace;
 }
 
-.bg-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
 * {
   scroll-behavior: smooth;
 }

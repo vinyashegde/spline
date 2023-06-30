@@ -9,7 +9,7 @@ export default function GithubCard(props) {
       <div className="px-6 py-3">
         <div className="font-bold text-xl mb-2">{title}</div>
       </div>
-      <img src={imageUrl} alt={title} className="w-full" />
+      <img src={imageUrl} alt={title} className="w-full h-60 object-cover" />
       <div className="px-6 py-4 flex justify-between items-center">
         <div>
           <span className="inline-block bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-300 mr-2">
