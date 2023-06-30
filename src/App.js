@@ -4,10 +4,10 @@ import NavbarWithCTAButton from "./components/navbar";
 import AboutCode from "./components/aboutcode";
 import GithubCard from "./components/githubcard";
 import AnimatedCursor from "react-animated-cursor";
-import FootCode from "./components/foot";
 import Footer from "./components/footnew";
 import DefaultTimeline from "./components/timeline";
-import PopupCard from "./components/PopupCard";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function ResizeHandler({ setIsMobile }) {
   useEffect(() => {
@@ -27,6 +27,10 @@ function ResizeHandler({ setIsMobile }) {
 }
 
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const [isMobile, setIsMobile] = useState(false);
 
   return (
@@ -57,24 +61,35 @@ function App() {
         </div>
 
         <div id="aboutt">
-          <div className="min-w-screen min-h-screen flex items-center justify-center m-4">
+          <div
+            className="min-w-screen min-h-screen items-center justify-center mt-52"
+            data-aos="flip-down"
+          >
             <AboutCode />
           </div>
         </div>
 
-        <h1 class="text-3xl text-white font-semibold pb-5" id="timelinee">
+        <h1
+          class="text-3xl text-white font-semibold pb-4"
+          id="timelinee"
+          data-aos="fade-down"
+        >
           Experience
         </h1>
-        <div className="m-20">
+        <div className="m-20" data-aos="fade-down">
           <DefaultTimeline />
         </div>
 
-        <h1 class="text-3xl text-white font-semibold pb-5 pt-20" id="projectss">
+        <h1
+          class="text-3xl text-white font-semibold pb-5 pt-20"
+          id="projectss"
+          data-aos="flip-down"
+        >
           Projects
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 m-7">
-          <div className={isMobile ? "w-full" : ""}>
+          <div className={isMobile ? "w-full" : ""} data-aos="flip-down">
             <GithubCard
               title="Shorto: URL Shortener"
               imageUrl="https://lh3.googleusercontent.com/1PPLFL4RkCAIYIOLH33y5sXCaDFb2maG0mwhazeDNCYZ3N18ZVWZU7o6Gg5D6-V1sEE7jsdCuibfXOn7h7wqfCuoPw=w640-h400-e365-rj-sc0x00ffffff"
@@ -84,7 +99,7 @@ function App() {
               githubLink="https://github.com/vinyashegde/shorto_url_shorter"
             />
           </div>
-          <div className={isMobile ? "w-full" : ""}>
+          <div className={isMobile ? "w-full" : ""} data-aos="flip-down">
             <GithubCard
               title="Interlace CSS Library"
               imageUrl="https://raw.githubusercontent.com/vinyashegde/dump/main/Untitled%20design.png"
@@ -94,7 +109,7 @@ function App() {
               githubLink="https://github.com/vinyashegde/interlace.css"
             />
           </div>
-          <div className={isMobile ? "w-full" : ""}>
+          <div className={isMobile ? "w-full" : ""} data-aos="flip-down">
             <GithubCard
               title="Project Floramis"
               imageUrl="https://raw.githubusercontent.com/vinyashegde/dump/main/Untitled%20design%20(1).png"
@@ -105,34 +120,41 @@ function App() {
             />
           </div>
           <div>
-            <div className={isMobile ? "w-full" : ""}>
+            <div className={isMobile ? "w-full" : ""} data-aos="flip-down">
               <GithubCard
-                title="Project Floramis"
+                title="The Food Bridge"
                 imageUrl="https://raw.githubusercontent.com/vinyashegde/dump/main/Untitled%20design%20(2).png"
                 htmlText="HTML"
                 cssText="CSS"
                 jsText="Firebase"
-                githubLink="https://github.com/vinyashegde/Project-Floramis/blob/main/INTRODUCTION.md"
+                githubLink="https://github.com/vinyashegde/foodbridge-firebase"
               />
             </div>
           </div>
           <div>
-            <div className={isMobile ? "w-full" : ""}>
+            <div className={isMobile ? "w-full" : ""} data-aos="flip-down">
               <GithubCard
                 title="Roll the Rooms"
                 imageUrl="https://img.itch.zone/aW1hZ2UvMTYyMzcyOS85NTE2NzY3LnBuZw==/original/ySbybu.png"
                 htmlText="Unity"
                 cssText="C#"
                 jsText=""
-                githubLink="https://github.com/vinyashegde/Project-Floramis/blob/main/INTRODUCTION.md"
+                githubLink="https://github.com/vinyashegde/Rolll-the-Dice-Gamejam"
               />
             </div>
           </div>
-          {/* <div>
-            <div className={isMobile ? "w-full" : ""}>
-              <GithubCard />
+          <div>
+            <div className={isMobile ? "w-full" : ""} data-aos="flip-down">
+              <GithubCard
+                title="Roll the Rooms"
+                imageUrl="https://raw.githubusercontent.com/vinyashegde/dump/main/github.PNG"
+                htmlText="Unity"
+                cssText="C#"
+                jsText=""
+                githubLink="https://github.com/vinyashegde/github-fetch-without-token"
+              />
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
       <div id="contactuss">

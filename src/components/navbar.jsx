@@ -2,7 +2,7 @@
 
 import { Button, Navbar } from "flowbite-react";
 import PopupCard from "./PopupCard";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function NavbarWithCTAButton() {
   const [showPopup, setShowPopup] = useState(false);
@@ -15,22 +15,28 @@ export default function NavbarWithCTAButton() {
     setShowPopup(false);
   };
 
+  const handleButtonClick = () => {
+    const url =
+      "https://drive.google.com/file/d/1-392sQrUXUf6OLf1f2QfCzWq5l0SAUu8/view?usp=sharing"; // Replace with your desired URL
+    window.open(url, "_blank");
+  };
+
   return (
     <div>
       <div>
         {/* Render other components or content */}
 
-        {showPopup && <PopupCard onClose={handleClosePopup} />}
+        {/* {showPopup && <PopupCard onClose={handleClosePopup} />} */}
       </div>
 
       <Navbar fluid rounded className="bg-navBar">
-        <Navbar.Brand href="https://flowbite-react.com">
+        <Navbar.Brand href="#">
           <span className="self-center whitespace-nowrap text-xl font-semibold text-white">
             Vinyas Hegde
           </span>
         </Navbar.Brand>
         <div className="flex md:order-2">
-          <Button className="text-white" onClick={handleOpenPopup}>
+          <Button className="text-white" onClick={handleButtonClick}>
             Resume
           </Button>
           <Navbar.Toggle />
