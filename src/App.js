@@ -70,7 +70,7 @@ function App() {
         </div>
 
         <h1
-          class="text-3xl text-white font-semibold pb-4"
+          class="text-3xl text-white font-semibold"
           id="timelinee"
           data-aos="fade-down"
         >
