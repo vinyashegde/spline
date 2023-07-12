@@ -146,7 +146,7 @@ function App() {
           <div>
             <div className={isMobile ? "w-full" : ""} data-aos="flip-down">
               <GithubCard
-                title="Roll the Rooms"
+                title="Github Scrapper"
                 imageUrl="https://raw.githubusercontent.com/vinyashegde/dump/main/github.PNG"
                 htmlText="Unity"
                 cssText="C#"
@@ -156,6 +156,7 @@ function App() {
             </div>
           </div>
         </div>
+
       </div>
       <div id="contactuss">
         <Footer />
